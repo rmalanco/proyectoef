@@ -1,5 +1,6 @@
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
+using System.Text.Json.Serialization;
 
 namespace proyectoef.models
 {
@@ -20,6 +21,7 @@ namespace proyectoef.models
         public virtual categoria categoria { get; set; }
         public DateTime fechaActualizacion { get; set; }
         //[NotMapped]
+        [JsonIgnore]
         public string resumen { get; set; }
 
         /* Resumen de DataAnnotations: 

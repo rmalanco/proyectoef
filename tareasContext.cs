@@ -17,6 +17,7 @@ public class tareasContext : DbContext // sirve para crear la base de datos en m
         categoriasInit.Add(new categoria { categoriaId = Guid.Parse("b26d5280-5460-47bf-9f5b-ed2eebc69a84"), nombre = "Actividades en progreso", descripcion = "Tareas en progreso", peso = 3 });
         categoriasInit.Add(new categoria { categoriaId = Guid.Parse("b26d5280-5460-47bf-9f5b-ed2eebc69a85"), nombre = "Actividades canceladas", descripcion = "Tareas canceladas", peso = 4 });
         categoriasInit.Add(new categoria { categoriaId = Guid.Parse("b26d5280-5460-47bf-9f5b-ed2eebc69a86"), nombre = "Actividades finalizadas", descripcion = "Tareas finalizadas", peso = 5 });
+        categoriasInit.Add(new categoria { categoriaId = Guid.Parse("b26d5280-5460-47bf-9f5b-ed2eebc69a87"), nombre = "Actividades eliminadas", descripcion = "Tareas eliminadas", peso = 6 });
 
 
         modelBuilder.Entity<categoria>(categoria =>
@@ -26,7 +27,7 @@ public class tareasContext : DbContext // sirve para crear la base de datos en m
             // indica que es la clave primaria
             categoria.HasKey(c => c.categoriaId);
             // indica que es un campo obligatorio y su tamaño máximo es 150
-            categoria.Property(c => c.nombre).IsRequired().HasMaxLength(150);
+            categoria.Property(c => c.nombre).IsRequired().HasMaxLength(160);
             // indica que es un campo opcional
             categoria.Property(c => c.descripcion).IsRequired(false);
             // indica que es un campo de tipo entero
@@ -43,6 +44,7 @@ public class tareasContext : DbContext // sirve para crear la base de datos en m
         tareasInit.Add(new tarea { tareaId = Guid.Parse("b26d5280-5460-47bf-9f5b-ed2eebc69a88"), categoriaId = Guid.Parse("b26d5280-5460-47bf-9f5b-ed2eebc69a82"), prioridadTarea = prioridad.media, titulo = "Pago de servicios publicos", descripcion = "Pago de servicios telefono", fechaCreacion = DateTime.Now, fechaActualizacion = DateTime.Now });
         tareasInit.Add(new tarea { tareaId = Guid.Parse("b26d5280-5460-47bf-9f5b-ed2eebc69a89"), categoriaId = Guid.Parse("b26d5280-5460-47bf-9f5b-ed2eebc69a82"), prioridadTarea = prioridad.media, titulo = "Pago de servicios publicos", descripcion = "Pago de servicios cable", fechaCreacion = DateTime.Now, fechaActualizacion = DateTime.Now });
         tareasInit.Add(new tarea { tareaId = Guid.Parse("b26d5280-5460-47bf-9f5b-ed2eebc69a90"), categoriaId = Guid.Parse("b26d5280-5460-47bf-9f5b-ed2eebc69a82"), prioridadTarea = prioridad.media, titulo = "Pago de servicios publicos", descripcion = "Pago de servicios netflix", fechaCreacion = DateTime.Now, fechaActualizacion = DateTime.Now });
+        tareasInit.Add(new tarea { tareaId = Guid.Parse("b26d5280-5460-47bf-9f5b-ed2eebc69a91"), categoriaId = Guid.Parse("b26d5280-5460-47bf-9f5b-ed2eebc69a82"), prioridadTarea = prioridad.media, titulo = "Pago de servicios publicos", descripcion = "Pago de servicios spotify", fechaCreacion = DateTime.Now, fechaActualizacion = DateTime.Now });
 
         modelBuilder.Entity<tarea>(tarea =>
         {

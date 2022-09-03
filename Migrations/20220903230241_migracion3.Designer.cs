@@ -3,6 +3,7 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using proyectoef;
 
@@ -11,9 +12,10 @@ using proyectoef;
 namespace proyectoef.Migrations
 {
     [DbContext(typeof(tareasContext))]
-    partial class tareasContextModelSnapshot : ModelSnapshot
+    [Migration("20220903230241_migracion3")]
+    partial class migracion3
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -38,8 +40,8 @@ namespace proyectoef.Migrations
 
                     b.Property<string>("nombre")
                         .IsRequired()
-                        .HasMaxLength(160)
-                        .HasColumnType("nvarchar(160)");
+                        .HasMaxLength(150)
+                        .HasColumnType("nvarchar(150)");
 
                     b.Property<int>("peso")
                         .HasColumnType("int");
@@ -137,8 +139,8 @@ namespace proyectoef.Migrations
                             tareaId = new Guid("b26d5280-5460-47bf-9f5b-ed2eebc69a87"),
                             categoriaId = new Guid("b26d5280-5460-47bf-9f5b-ed2eebc69a82"),
                             descripcion = "Pago de servicios publicos",
-                            fechaActualizacion = new DateTime(2022, 9, 3, 18, 15, 9, 493, DateTimeKind.Local).AddTicks(6743),
-                            fechaCreacion = new DateTime(2022, 9, 3, 18, 15, 9, 493, DateTimeKind.Local).AddTicks(6696),
+                            fechaActualizacion = new DateTime(2022, 9, 3, 18, 2, 40, 596, DateTimeKind.Local).AddTicks(454),
+                            fechaCreacion = new DateTime(2022, 9, 3, 18, 2, 40, 596, DateTimeKind.Local).AddTicks(412),
                             prioridadTarea = 1,
                             titulo = "Pago de servicios publicos"
                         },
@@ -147,8 +149,8 @@ namespace proyectoef.Migrations
                             tareaId = new Guid("b26d5280-5460-47bf-9f5b-ed2eebc69a88"),
                             categoriaId = new Guid("b26d5280-5460-47bf-9f5b-ed2eebc69a82"),
                             descripcion = "Pago de servicios telefono",
-                            fechaActualizacion = new DateTime(2022, 9, 3, 18, 15, 9, 493, DateTimeKind.Local).AddTicks(6754),
-                            fechaCreacion = new DateTime(2022, 9, 3, 18, 15, 9, 493, DateTimeKind.Local).AddTicks(6752),
+                            fechaActualizacion = new DateTime(2022, 9, 3, 18, 2, 40, 596, DateTimeKind.Local).AddTicks(464),
+                            fechaCreacion = new DateTime(2022, 9, 3, 18, 2, 40, 596, DateTimeKind.Local).AddTicks(462),
                             prioridadTarea = 1,
                             titulo = "Pago de servicios publicos"
                         },
@@ -157,8 +159,8 @@ namespace proyectoef.Migrations
                             tareaId = new Guid("b26d5280-5460-47bf-9f5b-ed2eebc69a89"),
                             categoriaId = new Guid("b26d5280-5460-47bf-9f5b-ed2eebc69a82"),
                             descripcion = "Pago de servicios cable",
-                            fechaActualizacion = new DateTime(2022, 9, 3, 18, 15, 9, 493, DateTimeKind.Local).AddTicks(6761),
-                            fechaCreacion = new DateTime(2022, 9, 3, 18, 15, 9, 493, DateTimeKind.Local).AddTicks(6759),
+                            fechaActualizacion = new DateTime(2022, 9, 3, 18, 2, 40, 596, DateTimeKind.Local).AddTicks(471),
+                            fechaCreacion = new DateTime(2022, 9, 3, 18, 2, 40, 596, DateTimeKind.Local).AddTicks(469),
                             prioridadTarea = 1,
                             titulo = "Pago de servicios publicos"
                         },
@@ -167,18 +169,8 @@ namespace proyectoef.Migrations
                             tareaId = new Guid("b26d5280-5460-47bf-9f5b-ed2eebc69a90"),
                             categoriaId = new Guid("b26d5280-5460-47bf-9f5b-ed2eebc69a82"),
                             descripcion = "Pago de servicios netflix",
-                            fechaActualizacion = new DateTime(2022, 9, 3, 18, 15, 9, 493, DateTimeKind.Local).AddTicks(6769),
-                            fechaCreacion = new DateTime(2022, 9, 3, 18, 15, 9, 493, DateTimeKind.Local).AddTicks(6767),
-                            prioridadTarea = 1,
-                            titulo = "Pago de servicios publicos"
-                        },
-                        new
-                        {
-                            tareaId = new Guid("b26d5280-5460-47bf-9f5b-ed2eebc69a91"),
-                            categoriaId = new Guid("b26d5280-5460-47bf-9f5b-ed2eebc69a82"),
-                            descripcion = "Pago de servicios spotify",
-                            fechaActualizacion = new DateTime(2022, 9, 3, 18, 15, 9, 493, DateTimeKind.Local).AddTicks(6776),
-                            fechaCreacion = new DateTime(2022, 9, 3, 18, 15, 9, 493, DateTimeKind.Local).AddTicks(6774),
+                            fechaActualizacion = new DateTime(2022, 9, 3, 18, 2, 40, 596, DateTimeKind.Local).AddTicks(478),
+                            fechaCreacion = new DateTime(2022, 9, 3, 18, 2, 40, 596, DateTimeKind.Local).AddTicks(476),
                             prioridadTarea = 1,
                             titulo = "Pago de servicios publicos"
                         });

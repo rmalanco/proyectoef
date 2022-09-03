@@ -14,7 +14,7 @@ namespace proyectoef.models
         public int peso { get; set; }
         public DateTime fechaCreacion { get; set; }
 
-        [JsonIgnore]
+        [JsonIgnore] // sirve para que no se muestre en el json de la respuesta de la api 
         public virtual ICollection<tarea> tareas { get; set; }
     }
 }
