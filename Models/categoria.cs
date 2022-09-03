@@ -7,12 +7,12 @@ namespace proyectoef.models
     {
         //[Key]
         public Guid categoriaId { get; set; }
-
         //[Required]
         //[MaxLength(150)]
         public string nombre { get; set; }
         public string descripcion { get; set; }
         public int peso { get; set; }
+        public DateTime fechaCreacion { get; set; }
 
         [JsonIgnore]
         public virtual ICollection<tarea> tareas { get; set; }

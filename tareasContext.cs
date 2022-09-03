@@ -31,6 +31,8 @@ public class tareasContext : DbContext // sirve para crear la base de datos en m
             categoria.Property(c => c.descripcion).IsRequired(false);
             // indica que es un campo de tipo entero
             categoria.Property(c => c.peso);
+            // indica que es un campo de tipo fecha
+            categoria.Property(c => c.fechaCreacion).HasDefaultValueSql("getdate()");
             // indica que la base de datos tiene datos
             categoria.HasData(categoriasInit);
 
